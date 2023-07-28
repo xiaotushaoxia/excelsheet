@@ -1,7 +1,9 @@
-## 对excelize中sheet的封装
+# 对excelize中sheet的封装
+
 1. 把sheet当成操作对象，可以避免在文件操作中频繁带sheet参数
 2. 封装了操作错误，可以不在每次操作后都判断err，在最后判断即可
 3. 发现excelize中行高需要SetRowHeight一行行设置（？暂时没找到），增加了批量设置行高的函数SetRowsHeight
+4. 设置Style的时候需要先NewStyle在SetXXXStyle，我增加了AddXXXStyle
 
 ## Example
 

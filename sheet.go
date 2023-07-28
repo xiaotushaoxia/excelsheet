@@ -1,6 +1,8 @@
 package excelsheet
 
-import "github.com/xuri/excelize/v2"
+import (
+	"github.com/xuri/excelize/v2"
+)
 
 type Sheet struct {
 	File     *excelize.File

@@ -98,3 +98,11 @@ func TestSheet2(t *testing.T) {
 	}
 	fmt.Println(buffer.Bytes())
 }
+
+func TestNewStyle(t *testing.T) {
+	file := excelize.NewFile()
+	fmt.Println(file.NewStyle(&excelize.Style{}))
+	fmt.Println(file.NewStyle(&excelize.Style{}))
+	fmt.Println(file.NewStyle(&excelize.Style{NumFmt: 1}))
+	fmt.Println(file.NewStyle(&excelize.Style{NumFmt: 1}))
+}
