@@ -15,9 +15,9 @@ func New(file *excelize.File, name string) (*Sheet, error) {
 	var idx int
 	var err error
 	if _, ok := file.Sheet.Load(name); ok {
-		idx, err = file.NewSheet(name)
-	} else {
 		idx, err = file.GetSheetIndex(name)
+	} else {
+		idx, err = file.NewSheet(name)
 	}
 	if err != nil {
 		return nil, err
